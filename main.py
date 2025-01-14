@@ -53,3 +53,13 @@ class Dog:
 
 dog = Dog("Golden Retriever", 3, "Buddy")
 print(dog.display_info())
+import random
+import string
+
+def generate_password(length):
+    all_characters = string.ascii_letters + string.digits + string.punctuation
+    password = ''.join(random.choice(all_characters) for _ in range(length))
+    return password
+
+password_length = 12
+print(generate_password(password_length))
